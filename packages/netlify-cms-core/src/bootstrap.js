@@ -56,6 +56,12 @@ function bootstrap(opts = {}) {
   if (config) {
     store.dispatch(mergeConfig(config));
   }
+  /**
+   * Overwrite language.
+   */
+  const { overwriteLang } = config || {};
+
+  const { locale, phrases } = overwriteLang || { locale: 'en', phrases: getPhrases() };
 
   /**
    * Create connected root component.
@@ -63,7 +69,7 @@ function bootstrap(opts = {}) {
   const Root = () => (
     <>
       <GlobalStyles />
-      <I18n locale={'en'} messages={getPhrases()}>
+      <I18n locale={locale} messages={phrases}>
         <ErrorBoundary showBackup>
           <Provider store={store}>
             <ConnectedRouter history={history}>
