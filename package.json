@@ -124,5 +124,6 @@
   "dependencies": {
     "@erquhart/lerna": "^3.14.1",
     "emotion": "^10.0.9"
-  }
+  },
+  "version": "0.0.1"
 }
