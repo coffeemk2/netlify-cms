@@ -62,7 +62,6 @@ function bootstrap(opts = {}) {
   const { overwriteLang } = config || {};
 
   const { locale, phrases } = overwriteLang || { locale: 'en', phrases: getPhrases() };
-
   /**
    * Create connected root component.
    */

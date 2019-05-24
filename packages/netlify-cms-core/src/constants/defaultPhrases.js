@@ -2,9 +2,9 @@ export function getPhrases() {
   return {
     app: {
       header: {
-        content: 'Contents',
-        workflow: 'Workflow',
-        media: 'Media',
+        content: 'コンテンツ',
+        workflow: 'ワークフロー',
+        media: 'メディア',
         quickAdd: 'Quick add',
       },
       app: {
